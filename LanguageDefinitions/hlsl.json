@@ -1,0 +1,90 @@
+{
+    "languageName" : "HLSL",
+    "languageDescription" : "High Level Shading Language",
+
+    "functionDefinitionFiles" : [
+        "Data/EngineAssets/LanguageDefinitions/hlslFunctions.hlsli",
+        "Data/EngineAssets/LanguageDefinitions/hlslMath.hlsli",
+        "Data/EngineAssets/LanguageDefinitions/hlslNoise.hlsli"
+    ],
+
+    "annotationFormat" : "//@",
+
+    "languageKeywords" : [
+        "break",
+        "case",
+        "continue",
+        "discard",
+        "do",
+        "else",
+        "false",
+        "for",
+        "if",
+        "return",
+        "switch",
+        "true",
+        "while"
+    ],
+
+    "dataTypes" : {
+        "float"  : {"matchingType" : "float"    },
+        "float2" : {"matchingType" : "Vector2f" },
+        "float3" : {"matchingType" : "Vector3f" },
+        "float4" : {"matchingType" : "Vector4f" },
+
+        "int"    : {"matchingType" : "int"      },
+        "int2"   : {"matchingType" : "Vector2i" },
+        "int3"   : {"matchingType" : "Vector3i" },
+        "int4"   : {"matchingType" : "Vector4i" },
+
+        "uint"    : {"matchingType" : "unsigned int" },
+
+        "bool"    : {"matchingType" : "int" },
+
+        "float3x3" : {"matchingType" : "Matrix3x3f" },
+        "float4x4" : {"matchingType" : "Matrix4x4f" },
+        "matrix"   : {"matchingType" : "Matrix4x4f" },
+
+        "Texture2D" : {"matchingType" : "ID3D11ShaderResourceView" },
+        "TextureCube" : {"matchingType" : "ID3D11ShaderResourceView" }
+    },
+
+    "typeColours" : {
+        "float"   : "#e5ff00",
+        "float2"  : "#ffbb00",
+        "float3"  : "#ff7300",
+        "float4"  : "#ff5100",
+
+        "int"      : "#00d9ff",
+        "int2"     : "#00ffaa",
+        "int3"     : "#00ff4c",
+        "int4"     : "#00ff00",
+
+        "uint"     : "#ff00ea",
+
+        "bool"     : "#ff0000",
+
+        "float3x3" : "#3700ff",
+        "float4x4" : "#8400ff",
+        "matrix"   : "#8400ff",
+
+        "Texture2D"   : "#ffffff",
+        "TextureCube" : "#ffffff"
+    },
+
+    "shaderResourceCollections" : 
+    {
+        "VS_Instanced" : [
+            "CommonBuffer"
+        ],
+
+        "PS_Instanced" : [
+            "CommonBuffer",
+            "ModelAlbedoTex",
+            "ModelNormalTex",
+            "ModelMaterialTex",
+            "ModelEffectsTex"
+        ]
+    }
+
+}
